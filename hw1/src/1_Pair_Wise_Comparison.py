@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import os
-import skiamge as sk
 
 # """
 #     bt: threshold for blue value difference
@@ -47,12 +46,12 @@ def Pair_Wise_Comparison(file_list, t=15, cp=0.4):
     w: window size for smoothing comparison
 """
 def Pair_Wise_Comparison_Window(file_list, t=15, cp=0.4, w=3):
-    img_1 = cv2.cvtColor(cv2.imread(file_list[0]), cv2.COLOR_BGR2GRAY).astype("int16")
+    img_1 = cv2.blur(cv2.cvtColor(cv2.imread(file_list[0]), cv2.COLOR_BGR2GRAY), (w, w)).astype("int16")
     img_pixel = img_1.shape[0] * img_1.shape[1]
     shot_change_index = []
 
     for i in range(1, len(file_list)-1):
-        img_2 = cv2.cvtColor(cv2.imread(file_list[i]), cv2.COLOR_BGR2GRAY).astype("int16")
+        img_2 = cv2.blur(cv2.cvtColor(cv2.imread(file_list[i]), cv2.COLOR_BGR2GRAY), (w, w)).astype("int16")
         if (abs(img_1 - img_2) > t).sum() > (img_pixel * cp):
             shot_change_index.append(i)
         img_1 = img_2   
@@ -98,6 +97,7 @@ if __name__ == "__main__":
         news_file_list = [os.path.join(dir_path, file) for file in file_list]
     print("Default pair-wise comparison for shot-change detection of news.mpg: ", Pair_Wise_Comparison(news_file_list))
     print("Windowed pair-wise comparison for shot-change detection of news.mpg: ", Pair_Wise_Comparison_Window(news_file_list))
+    print()
 
     # soccer
     soccer_file_list = []
@@ -105,6 +105,7 @@ if __name__ == "__main__":
         soccer_file_list = [os.path.join(dir_path, file) for file in file_list]
     print("Default pair-wise comparison for shot-change detection of soccer.mpg: ", Pair_Wise_Comparison(soccer_file_list))
     print("Windowed pair-wise comparison for shot-change detection of soccer.mpg: ", Pair_Wise_Comparison_Window(soccer_file_list))
+    print()
 
     # ngc
     ngc_file_list = []
@@ -112,3 +113,4 @@ if __name__ == "__main__":
         ngc_file_list = [os.path.join(dir_path, file) for file in file_list]
     print("Default pair-wise comparison for shot-change detection of ngc.mpg: ", Pair_Wise_Comparison(ngc_file_list))
     print("Windowed pair-wise comparison for shot-change detection of ngc.mpg: ", Pair_Wise_Comparison_Window(ngc_file_list))
+    print()
