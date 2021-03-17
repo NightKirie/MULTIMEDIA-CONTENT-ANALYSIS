@@ -91,21 +91,21 @@ def Pair_Wise_Comparison_Window(file_list, t=15, cp=0.4, w=3):
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     
-    # news
-    news_file_list = []
-    for dir_path, _, file_list in os.walk("../news_out"):
-        news_file_list = [os.path.join(dir_path, file) for file in file_list]
-    print("Default pair-wise comparison for shot-change detection of news.mpg: ", Pair_Wise_Comparison(news_file_list))
-    print("Windowed pair-wise comparison for shot-change detection of news.mpg: ", Pair_Wise_Comparison_Window(news_file_list))
-    print()
+    # # news
+    # news_file_list = []
+    # for dir_path, _, file_list in os.walk("../news_out"):
+    #     news_file_list = [os.path.join(dir_path, file) for file in file_list]
+    # print("Default pair-wise comparison for shot-change detection of news.mpg: ", Pair_Wise_Comparison(news_file_list))
+    # print("Windowed pair-wise comparison for shot-change detection of news.mpg: ", Pair_Wise_Comparison_Window(news_file_list))
+    # print()
 
-    # soccer
-    soccer_file_list = []
-    for dir_path, _, file_list in os.walk("../soccer_out"):
-        soccer_file_list = [os.path.join(dir_path, file) for file in file_list]
-    print("Default pair-wise comparison for shot-change detection of soccer.mpg: ", Pair_Wise_Comparison(soccer_file_list))
-    print("Windowed pair-wise comparison for shot-change detection of soccer.mpg: ", Pair_Wise_Comparison_Window(soccer_file_list))
-    print()
+    # # soccer
+    # soccer_file_list = []
+    # for dir_path, _, file_list in os.walk("../soccer_out"):
+    #     soccer_file_list = [os.path.join(dir_path, file) for file in file_list]
+    # print("Default pair-wise comparison for shot-change detection of soccer.mpg: ", Pair_Wise_Comparison(soccer_file_list))
+    # print("Windowed pair-wise comparison for shot-change detection of soccer.mpg: ", Pair_Wise_Comparison_Window(soccer_file_list))
+    # print()
 
     # ngc
     ngc_file_list = []
