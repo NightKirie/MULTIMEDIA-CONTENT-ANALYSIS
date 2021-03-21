@@ -1,15 +1,22 @@
 import cv2
 import numpy as np
 import os
+import collections
 
-# a = np.arange(1, 26).reshape(5, 5)
-# kernel = np.ones((3,3),np.float32)/9
-# print(cv2.blur(a, (3, 3)))
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-a = cv2.imread("../news_out/news-0000000.jpg")
-cv2.imshow("a", a)
-cv2.waitKey(0)
-b = cv2.blur(a, (3, 3))
-cv2.imshow("b", b)
-cv2.waitKey(0)
-cv2.destoryAllWindow()
+def count_subarray(arr):
+    arr = arr.reshape(-1, arr.shape[-1])
+    tuple_arr = [tuple(x) for x in arr]
+    return collections.Counter(tuple_arr)
+    
+
+
+a = np.array([[[0,0,0],[0,0,0]],[[0,0,2],[0,0,3]],[[0,0,0],[0,0,0]]])
+b = np.array([[[0,0,0],[0,0,1]],[[0,0,1],[0,0,1]],[[0,0,4],[0,0,5]]])
+
+
+# count_subarray(a)
+a_p = count_subarray(a)
+b_p = count_subarray(b)
+a_p = b_p
+print(a_p)
+print(b_p)
