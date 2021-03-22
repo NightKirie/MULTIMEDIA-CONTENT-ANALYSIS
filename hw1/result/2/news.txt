@@ -1,0 +1,9 @@
+Histogram comparison with gray color & default equation for shot-change detection of news.mpg:
+[73, 235, 301, 370, 371, 451, 452, 861, 1281]
+
+Histogram comparison with gray color & X2-test for shot-change detection of news.mpg:
+[235, 301, 370, 451, 452, 861, 1281]
+
+Histogram comparison with rgb color for shot-change detection of news.mpg:
+[73, 235, 301, 370, 451, 452, 861, 1281]
+

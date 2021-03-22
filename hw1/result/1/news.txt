@@ -1,0 +1,6 @@
+Default pair-wise comparison for shot-change detection of news.mpg:
+[73, 235, 301, 370, 452, 861, 1281]
+
+Windowed pair-wise comparison for shot-change detection of news.mpg:
+[73, 235, 301, 370, 452, 861, 1281]
+
