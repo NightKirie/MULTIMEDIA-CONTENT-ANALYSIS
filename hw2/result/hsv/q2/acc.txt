@@ -1,0 +1,21 @@
+Accuracy of gaussian Mixture with 2 component: 0.6085944700460829
+Accuracy of gaussian Mixture with 3 component: 0.6663248847926267
+Accuracy of gaussian Mixture with 4 component: 0.6855414746543779
+Accuracy of gaussian Mixture with 5 component: 0.652373271889401
+Accuracy of gaussian Mixture with 6 component: 0.6465322580645161
+Accuracy of gaussian Mixture with 7 component: 0.668594470046083
+Accuracy of gaussian Mixture with 8 component: 0.6611751152073733
+Accuracy of gaussian Mixture with 9 component: 0.6574193548387097
+Accuracy of gaussian Mixture with 10 component: 0.6629032258064517
+Accuracy of gaussian Mixture with 11 component: 0.668294930875576
+Accuracy of gaussian Mixture with 12 component: 0.6494930875576037
+Accuracy of gaussian Mixture with 13 component: 0.6523963133640553
+Accuracy of gaussian Mixture with 14 component: 0.6488364055299539
+Accuracy of gaussian Mixture with 15 component: 0.6515437788018433
+Accuracy of gaussian Mixture with 16 component: 0.6495046082949308
+Accuracy of gaussian Mixture with 17 component: 0.6711520737327189
+Accuracy of gaussian Mixture with 18 component: 0.6505414746543778
+Accuracy of gaussian Mixture with 19 component: 0.6675
+Accuracy of gaussian Mixture with 20 component: 0.6524654377880185
+
+Average of accuracy is 0.6563782439970897
